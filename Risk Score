@@ -1,0 +1,269 @@
+// Made by TigerHack for the RGU HACK 2022
+alert("Hello there and welcome to TigerHack INC.")
+alert("---------")
+
+//let employeeName = "Ryan";
+let employeeName = prompt("Please enter your first name : ");
+//let employeeSurname = "Smithing";
+let employeeSurname = prompt("Please enter your last name : ");
+//let employeePosition = "Secretary";
+let employeePosition = prompt("Enter the position you have applied for : ");
+
+alert("---------")
+alert("IMPORTANT NOTICE");
+alert("The following is a compulsory assessment that is done by every employee before they start their job in CISCO INC.")
+alert("The following questionnaire will assess if you are a risk to the security of this company.");
+alert("The results of this questionnaire will be usefull as they will give you additional training on internet and computer security.");
+alert("---------")
+
+let profileScore = 0;
+let trainingScore = 0;
+let browsingScore = 0;
+let mobileScore = 0;
+let hoursOnPhone = 0;
+let protectionScore = 0;
+
+let profileCheckQuestion = prompt("Firstly, you have to answer yes or no questions about your past. This is a standard procedure to make sure you do not have any bad intentions towards our company. Enter B to begin. ");
+
+if(profileCheckQuestion == "B"){
+  alert(profileCheckQuestions());
+}
+
+let trainingQuestion = prompt("You must answer some questions about training. Enter Y to answer. ");
+
+if(trainingQuestion == "Y" ){
+  alert(trainingQuestions());
+}
+
+alert("---------")
+let browsingHabitsQuestion = prompt("You will now enter your browsing habits. Enter Y to continue. ");
+
+if(browsingHabitsQuestion == "Y"){
+  alert(browsingHabits());
+}
+
+alert("---------")
+let mobileUsageQuestion = prompt("You will now enter data about your mobile usage. Enter Y to continue. ");
+
+if(mobileUsageQuestion == "Y"){
+  alert(mobileUsage());
+}
+
+alert("---------")
+let protectionQuestion = prompt("You will now answer some questions about digital protection. Enter Y to continue. ");
+
+if(protectionQuestion == "Y"){
+  alert(digitalProtection());
+}
+
+function profileCheckQuestions(){
+  let questPC1 = prompt("Have you been involved in any criminal activity at any point in your life? ")
+  let questPC2 = prompt("Are you a currently a member of a hacker group? ")
+  let questPC3 = prompt("Have you ever taken bribes at your previous workplace? ")
+  let questPC4 = prompt("Have you ever released private company information to a third party or a competitor? ")
+  let questPC5 = prompt("Have you ever used company information for your own gain? ")
+  let questPC6 = prompt("Have you ever been involved in blackmail? ")
+
+  if(questPC1 == "Y" || questPC1 == "YES" || questPC1 == "y" || questPC1 == "yes"){
+    profileScore = profileScore + 1;
+  }
+  if(questPC2 == "Y" || questPC2 == "YES" || questPC2 == "y" || questPC2 == "yes"){
+    profileScore = profileScore + 1;
+  }
+  if(questPC3 == "Y" || questPC3 == "YES" || questPC3 == "y" || questPC3 == "yes"){
+    profileScore = profileScore + 1;
+  }
+  if(questPC4 == "Y" || questPC4 == "YES" || questPC4 == "y" || questPC4 == "yes"){
+    profileScore = profileScore + 1;
+  }
+  if(questPC5 == "Y" || questPC5 == "YES" || questPC5 == "y" || questPC5 == "yes"){
+    profileScore = profileScore + 1;
+  }
+  if(questPC6 == "Y" || questPC6 == "YES" || questPC6 == "y" || questPC6 == "yes"){
+    profileScore = profileScore + 1;
+  }
+}
+
+function trainingQuestions(){
+  let questTQ1 = prompt("Did you ever receive any training related to computing in your previous workplace? ");
+  let questTQ2 = prompt("If you received any training, enter the level of training you have received. Enter between 1 to 5 " );
+  let questTQ3 = prompt("Would you be happy to receive any training while you are working with us? ");
+
+  if(questTQ1 == "Yes" || questTQ1 == "Y" || questTQ1 == "y" || questTQ1 == "yes"){
+    trainingScore = trainingScore + 1;
+  }
+
+  if(questTQ2 == "5"){
+    trainingScore = trainingScore + 5;
+  } else if (questTQ2 == "4"){
+    trainingScore = trainingScore + 4;
+  } else if (questTQ2 == "3"){
+    trainingScore = trainingScore + 3;
+  } else if (questTQ2 == "2"){
+    trainingScore = trainingScore + 2;
+  } else {
+    trainingScore = trainingScore + 1;
+  }
+
+  if(questTQ3 == "Yes" || questTQ3 == "Y" || questTQ3 == "y" || questTQ3 == "yes"){
+    trainingScore = trainingScore + 1;
+  }
+}
+
+function browsingHabits(){
+  let questBH1 = prompt("How many hours do you spend browsing the internet while working? ");
+  let questBH2 = prompt("While browsing, do you visit sites that are secure and safe? ");
+  let questBH3 = prompt("Have you ever entered your personal information into a website using your work computer? ");
+  let questBH4 = prompt("Did you ever you use a hidden mode on any browser whilst you were working? ");
+  let questBH5 = prompt("Have you ever bought anything from an online shop whilst you were at work? ");
+  let questBH6 = prompt("When browsing, would you be able to identify a false website from the real one? ");
+
+  if(questBH1 == "8"){
+    browsingScore = browsingScore + 8;
+  } else if(questBH1 == "7"){
+    browsingScore = browsingScore + 7;
+  } else if(questBH1 == "6"){
+    browsingScore = browsingScore + 6;
+  } else if(questBH1 == "5"){
+    browsingScore = browsingScore + 5;
+  } else if(questBH1 == "4"){
+    browsingScore = browsingScore + 4;
+  } else if(questBH1 == "3"){
+    browsingScore = browsingScore + 3;
+  } else if(questBH1 == "2"){
+    browsingScore = browsingScore + 2;
+  } else if(questBH1 == "1"){
+    browsingScore = browsingScore + 1;
+  } else {
+    browsingScore = browsingScore + 0;
+  }
+
+  if(questBH2 == "Yes" || questBH2 == "Y" || questBH2 == "y" || questBH2 == "yes"){
+    browsingScore = browsingScore + 1;
+  }
+
+  if(questBH3 == "Yes" || questBH3 == "Y" || questBH3 == "y" || questBH3 == "yes"){
+    browsingScore = browsingScore + 1;
+  }
+
+  if(questBH4 == "Yes" || questBH4 == "Y" || questBH4 == "y" || questBH4 == "yes"){
+    browsingScore = browsingScore + 1;
+  }
+
+  if(questBH5 == "Yes" || questBH5 == "Y" || questBH5 == "y" || questBH5 == "yes"){
+    browsingScore = browsingScore + 1;
+  }
+
+  if(questBH6 == "Yes" || questBH6 == "Y" || questBH6 == "y" || questBH6 == "yes"){
+    browsingScore = browsingScore + 1;
+  }
+  
+}
+
+function mobileUsage(){
+  let questMU1 = prompt("On average, how many hours do you spend on your phone each day? ")
+  let questMU2 = prompt("Do you often check your phone whilst you are at work? ")
+  let questMU3 = prompt("Do you often find yourself to be distracted by your mobile phone whilst working? ")
+  let questMU4 = prompt("Do you think that employees should have a phone for work purposes only? ")
+
+  
+  if(questMU1 == "7"){
+    hoursOnPhone = hoursOnPhone + 7;
+  } else if(questMU1 == "6"){
+    hoursOnPhone = hoursOnPhone + 6;
+  } else if(questMU1 == "5"){
+    hoursOnPhone = hoursOnPhone + 5;
+  }else if(questMU1 == "4"){
+    hoursOnPhone = hoursOnPhone + 4;
+  }else if(questMU1 == "3"){
+    hoursOnPhone = hoursOnPhone + 3;
+  }else if(questMU1 == "2"){
+    hoursOnPhone = hoursOnPhone + 2;
+  }else if(questMU1 == "1"){
+    hoursOnPhone = hoursOnPhone + 1;
+  }else{
+    hoursOnPhone = hoursOnPhone + 0;
+  }
+
+  if(questMU2 == "YES" || questMU2 == "Y" || questMU2 == "y" || questMU2 == "yes"){
+    mobileScore = mobileScore + 1;
+  }
+  if(questMU3 == "YES" || questMU3 == "Y" || questMU3 == "y" || questMU3 == "yes"){
+    mobileScore = mobileScore + 1;
+  }
+  if(questMU4 == "YES" || questMU4 == "Y" || questMU4 == "y" || questMU4 == "yes"){
+    mobileScore = mobileScore + 1;
+  }
+  
+}
+
+function digitalProtection(){
+  let questDP1 = prompt("Are you aware of what a VPN is?");
+  let questDP2 = prompt("Did you download an anti-virus from a secure and well respected source? ");
+  let questDP3 = prompt("Do you know how to identify a fake email? " );
+  let questDP4 = prompt("Are you familiar with the term 'phishing?'? " );
+  let questDP5 = prompt("Are you familiar with the term 'key-logging'? " );
+
+  if(questDP1 == "YES" || questDP1 == "Y" || questDP1 == "y" || questDP1 == "yes"){
+    protectionScore = protectionScore + 1;
+  }
+  if(questDP2 == "YES" || questDP2 == "Y" || questDP2 == "y" || questDP2 == "yes"){
+    protectionScore = protectionScore + 1;
+  }
+  if(questDP3 == "YES" || questDP3 == "Y" || questDP3 == "y" || questDP3 == "yes"){
+    protectionScore = protectionScore + 1;
+  }
+  if(questDP4 == "YES" || questDP4 == "Y" || questDP4 == "y" || questDP4 == "yes"){
+    protectionScore = protectionScore + 1;
+  }
+  if(questDP5 == "YES" || questDP5 == "Y" || questDP5 == "y" || questDP5 == "yes"){
+    protectionScore = protectionScore + 1;
+  }
+}
+
+let riskScore = profileScore + trainingScore + browsingScore + mobileScore + protectionScore;
+
+alert("---------")
+
+if(profileScore >= 1){
+  alert("We are sorry, " + employeeName, employeeSurname + " , we are unable to hire you at the position of " + employeePosition + "because you are potential security risk to our company.")
+} else {
+  alert("Congratulations, " + employeeName, employeeSurname + ", you have been hired at the position of " + employeePosition + " at TigerHack INC. ")
+}
+
+alert("It appears you have a training score of " + trainingScore + " . ")
+
+if(trainingScore <=3){
+  alert("Did you know, that we can offer you courses and additional training in the field of computing? ");
+} else {
+  alert("We can see that you are very skilled in the field of computing, and you can still learn more by taking part our courses. ")
+}
+
+if(browsingScore <=4){
+  alert("It appears that you need to improve the way you browse the internet based on your score of " + browsingScore + " .");
+} else {
+  alert("It appears that you know how to navigate the internet safely and without any issues. ")
+}
+
+if(hoursOnPhone >= 4 ){
+  alert("The amount of hours you spend using your phone is alarming, we hope that these " + hoursOnPhone +" hours are not spent during your work day, as it can have a significant impact on your salary and your employment at the company. ")
+} else if (hoursOnPhone <= 2){
+  alert("It appears that you don't spend that much time on your phone at just " + hoursOnPhone + " hours per day, keep it up. ")
+} else {
+  alert("You seem to spend some time on your phone at " + hoursOnPhone + " hours per day, we hope that you don't get that distracted by your phone during work hours and start to reduce the amount of screen time as soon as possible. ")
+}
+
+if(protectionScore >= 3){
+  alert("With a digital protection score of " + protectionScore + ", it appears that you know a few things about staying safe and protecting your data from intruders.")
+} else {
+  alert("Since your digital protection score is " + protectionScore + " , it looks like you really need to learn more about the different ways in which you can protect yourself from intruders that want to steal your data and information. ")
+}
+
+alert("Hello " + employeeName, employeeSurname + ", it appears that you have a Risk Score of " + riskScore + " .")
+
+// alert("Profile Check Score : " + profileScore);
+// alert("Training Score : " + trainingScore);
+// alert("Browsing Score : " + browsingScore);
+// alert("Mobile Usage Score : " + mobileScore);
+// alert("Digital Protection Score : " + protectionScore);
+// alert("Final Risk Score : " + riskScore);
